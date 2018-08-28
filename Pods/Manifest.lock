@@ -1,0 +1,78 @@
+PODS:
+  - boost-for-react-native (1.63.0)
+  - DoubleConversion (1.1.5)
+  - Folly (2016.09.26.00):
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
+  - glog (0.3.4)
+  - pod4ReactNative (0.55.4):
+    - pod4ReactNative/Core (= 0.55.4)
+    - pod4ReactNative/CxxBridge (= 0.55.4)
+    - pod4ReactNative/DevSupport (= 0.55.4)
+    - pod4ReactNative/RCTAnimation (= 0.55.4)
+    - pod4ReactNative/RCTImage (= 0.55.4)
+    - pod4ReactNative/RCTText (= 0.55.4)
+    - pod4ReactNative/RCTWebSocket (= 0.55.4)
+    - pod4ReactNative/yoga (= 0.55.4)
+  - pod4ReactNative/Core (0.55.4):
+    - pod4ReactNative/yoga
+  - pod4ReactNative/CxxBridge (0.55.4):
+    - Folly (= 2016.09.26.00)
+    - pod4ReactNative/Core
+    - pod4ReactNative/cxxreact
+  - pod4ReactNative/cxxreact (0.55.4):
+    - boost-for-react-native (= 1.63.0)
+    - Folly (= 2016.09.26.00)
+    - pod4ReactNative/jschelpers
+    - pod4ReactNative/jsinspector
+  - pod4ReactNative/DevSupport (0.55.4):
+    - pod4ReactNative/Core
+    - pod4ReactNative/RCTWebSocket
+  - pod4ReactNative/fishhook (0.55.4)
+  - pod4ReactNative/jschelpers (0.55.4):
+    - Folly (= 2016.09.26.00)
+    - pod4ReactNative/PrivateDatabase
+  - pod4ReactNative/jsinspector (0.55.4)
+  - pod4ReactNative/PrivateDatabase (0.55.4)
+  - pod4ReactNative/RCTAnimation (0.55.4):
+    - pod4ReactNative/Core
+  - pod4ReactNative/RCTBlob (0.55.4):
+    - pod4ReactNative/Core
+  - pod4ReactNative/RCTImage (0.55.4):
+    - pod4ReactNative/Core
+    - pod4ReactNative/RCTNetwork
+  - pod4ReactNative/RCTNetwork (0.55.4):
+    - pod4ReactNative/Core
+  - pod4ReactNative/RCTText (0.55.4):
+    - pod4ReactNative/Core
+  - pod4ReactNative/RCTWebSocket (0.55.4):
+    - pod4ReactNative/Core
+    - pod4ReactNative/fishhook
+    - pod4ReactNative/RCTBlob
+  - pod4ReactNative/yoga (0.55.4)
+
+DEPENDENCIES:
+  - pod4ReactNative (from `./`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - boost-for-react-native
+    - DoubleConversion
+    - Folly
+    - glog
+
+EXTERNAL SOURCES:
+  pod4ReactNative:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  DoubleConversion: e22e0762848812a87afd67ffda3998d9ef29170c
+  Folly: 211775e49d8da0ca658aebc8eab89d642935755c
+  glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
+  pod4ReactNative: ab0d56b90c1dbe764b3190e1723d79e3632795da
+
+PODFILE CHECKSUM: d8cb02b283f6562a53a097cb2afd417356384427
+
+COCOAPODS: 1.5.3

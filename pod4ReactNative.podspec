@@ -5,9 +5,9 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 folly_version = '2016.09.26.00'
 
 Pod::Spec.new do |s|
-  s.name         = "pod for ReactNative"
+  s.name         = "pod4ReactNative"
   s.version      = "0.55.4"
-  s.summary      = "pod4ReactNative"
+  s.summary      = "pod for ReactNative"
   s.description  = <<-DESC
                     pod for ReactNative with RN v0.55.4.
                    DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.cocoapods_version       = ">= 1.2.0"
 
   s.subspec "Core" do |ss|
-    ss.dependency             "JBReact/yoga"
+    ss.dependency             "pod4ReactNative/yoga"
     ss.source_files         = "rn-source/React/**/*.{c,h,m,mm,S,cpp}"
     ss.exclude_files        = "rn-source/**/__tests__/*",
                               "rn-source/IntegrationTests/*",
@@ -52,28 +52,28 @@ Pod::Spec.new do |s|
 
   s.subspec "CxxBridge" do |ss|
     ss.dependency             "Folly", "2016.09.26.00"
-    ss.dependency             "JBReact/Core"
-    ss.dependency             "JBReact/cxxreact"
+    ss.dependency             "pod4ReactNative/Core"
+    ss.dependency             "pod4ReactNative/cxxreact"
     ss.compiler_flags       = folly_compiler_flags
     ss.private_header_files = "rn-source/React/Cxx*/*.h"
     ss.source_files         = "rn-source/React/Cxx*/*.{h,m,mm}"
   end
 
   s.subspec "DevSupport" do |ss|
-    ss.dependency             "JBReact/Core"
-    ss.dependency             "JBReact/RCTWebSocket"
+    ss.dependency             "pod4ReactNative/Core"
+    ss.dependency             "pod4ReactNative/RCTWebSocket"
     ss.source_files         = "rn-source/React/DevSupport/*",
                               "rn-source/React/Inspector/*"
   end
 
   # s.subspec "tvOS" do |ss|
-  #   ss.dependency             "JBReact/Core"
+  #   ss.dependency             "pod4ReactNative/Core"
   #   ss.source_files         = "rn-source/React/**/RCTTV*.{h, m}"
   # end
 
   s.subspec "jschelpers" do |ss|
     ss.dependency             "Folly", "2016.09.26.00"
-    ss.dependency             "JBReact/PrivateDatabase"
+    ss.dependency             "pod4ReactNative/PrivateDatabase"
     ss.compiler_flags       = folly_compiler_flags
     ss.source_files         = "rn-source/ReactCommon/jschelpers/*.{cpp,h}"
     ss.private_header_files = "rn-source/ReactCommon/jschelpers/*.h"
@@ -91,8 +91,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "cxxreact" do |ss|
-    ss.dependency             "JBReact/jschelpers"
-    ss.dependency             "JBReact/jsinspector"
+    ss.dependency             "pod4ReactNative/jschelpers"
+    ss.dependency             "pod4ReactNative/jsinspector"
     ss.dependency             "boost-for-react-native", "1.63.0"
     ss.dependency             "Folly", "2016.09.26.00"
     ss.compiler_flags       = folly_compiler_flags
@@ -102,73 +102,73 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "ART" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/ART/**/*.{h,m}"
   end
 
   s.subspec "RCTActionSheet" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/ActionSheetIOS/*.{h,m}"
   end
 
   s.subspec "RCTAnimation" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/NativeAnimation/{Drivers/*,Nodes/*,*}.{h,m}"
     ss.header_dir           = "RCTAnimation"
   end
 
   s.subspec "RCTBlob" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/Blob/*.{h,m,mm}"
     ss.preserve_paths       = "rn-source/Libraries/Blob/*.js"
   end
 
   s.subspec "RCTCameraRoll" do |ss|
-    ss.dependency             "JBReact/Core"
-    ss.dependency             'JBReact/RCTImage'
+    ss.dependency             "pod4ReactNative/Core"
+    ss.dependency             'pod4ReactNative/RCTImage'
     ss.source_files         = "rn-source/Libraries/CameraRoll/*.{h,m}"
   end
 
   s.subspec "RCTGeolocation" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/Geolocation/*.{h,m}"
   end
 
   s.subspec "RCTImage" do |ss|
-    ss.dependency             "JBReact/Core"
-    ss.dependency             "JBReact/RCTNetwork"
+    ss.dependency             "pod4ReactNative/Core"
+    ss.dependency             "pod4ReactNative/RCTNetwork"
     ss.source_files         = "rn-source/Libraries/Image/*.{h,m}"
   end
 
   s.subspec "RCTNetwork" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/Network/*.{h,m,mm}"
   end
 
   s.subspec "RCTPushNotification" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/PushNotificationIOS/*.{h,m}"
   end
 
   s.subspec "RCTSettings" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/Settings/*.{h,m}"
   end
 
   s.subspec "RCTText" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/Text/**/*.{h,m}"
   end
 
   s.subspec "RCTVibration" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/Vibration/*.{h,m}"
   end
 
   s.subspec "RCTWebSocket" do |ss|
-    ss.dependency             "JBReact/Core"
-    ss.dependency             "JBReact/RCTBlob"
-    ss.dependency             "JBReact/fishhook"
+    ss.dependency             "pod4ReactNative/Core"
+    ss.dependency             "pod4ReactNative/RCTBlob"
+    ss.dependency             "pod4ReactNative/fishhook"
     ss.source_files         = "rn-source/Libraries/WebSocket/*.{h,m}"
   end
 
@@ -178,19 +178,19 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "RCTLinkingIOS" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/LinkingIOS/*.{h,m}"
   end
 
   s.subspec "RCTTest" do |ss|
-    ss.dependency             "JBReact/Core"
+    ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/RCTTest/**/*.{h,m}"
     ss.frameworks           = "XCTest"
   end
 
   s.subspec "_ignore_me_subspec_for_linting_" do |ss|
-    ss.dependency             "JBReact/Core"
-    ss.dependency             "JBReact/CxxBridge"
+    ss.dependency             "pod4ReactNative/Core"
+    ss.dependency             "pod4ReactNative/CxxBridge"
   end
   
   s.subspec "yoga" do |spec|

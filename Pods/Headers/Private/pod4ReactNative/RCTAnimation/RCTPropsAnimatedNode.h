@@ -1,0 +1,1 @@
+../../../../../rn-source/Libraries/NativeAnimation/Nodes/RCTPropsAnimatedNode.h

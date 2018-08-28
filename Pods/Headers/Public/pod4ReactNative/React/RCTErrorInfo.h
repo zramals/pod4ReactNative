@@ -1,0 +1,1 @@
+../../../../../rn-source/React/Base/RCTErrorInfo.h

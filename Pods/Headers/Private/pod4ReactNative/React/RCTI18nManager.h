@@ -1,0 +1,1 @@
+../../../../../rn-source/React/Modules/RCTI18nManager.h
