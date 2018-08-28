@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/zramals/pod4ReactNative"
   s.license      = "MIT"
   s.author             = { "zramals" => "525456448@qq.com" }
-  s.source       = { :git => "http://gitlab.yixinonline.org/YRD_CreditPerson_ios/YRDReactNative.git", :tag => "rnsource#{s.version}" }
+  s.source       = { :git => "https://github.com/zramals/pod4ReactNative.git", :tag => "rn#{s.version}" }
 
   s.default_subspec         = 'yoga', 'Core', 'CxxBridge', 'DevSupport', 'RCTWebSocket', 'RCTText', 'RCTAnimation', 'RCTImage'
   s.header_dir              = "React"
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.cocoapods_version       = ">= 1.2.0"
 
   s.subspec "Core" do |ss|
-    ss.dependency             "YRDReact/yoga"
+    ss.dependency             "JBReact/yoga"
     ss.source_files         = "rn-source/React/**/*.{c,h,m,mm,S,cpp}"
     ss.exclude_files        = "rn-source/**/__tests__/*",
                               "rn-source/IntegrationTests/*",
@@ -52,28 +52,28 @@ Pod::Spec.new do |s|
 
   s.subspec "CxxBridge" do |ss|
     ss.dependency             "Folly", "2016.09.26.00"
-    ss.dependency             "YRDReact/Core"
-    ss.dependency             "YRDReact/cxxreact"
+    ss.dependency             "JBReact/Core"
+    ss.dependency             "JBReact/cxxreact"
     ss.compiler_flags       = folly_compiler_flags
     ss.private_header_files = "rn-source/React/Cxx*/*.h"
     ss.source_files         = "rn-source/React/Cxx*/*.{h,m,mm}"
   end
 
   s.subspec "DevSupport" do |ss|
-    ss.dependency             "YRDReact/Core"
-    ss.dependency             "YRDReact/RCTWebSocket"
+    ss.dependency             "JBReact/Core"
+    ss.dependency             "JBReact/RCTWebSocket"
     ss.source_files         = "rn-source/React/DevSupport/*",
                               "rn-source/React/Inspector/*"
   end
 
   # s.subspec "tvOS" do |ss|
-  #   ss.dependency             "YRDReact/Core"
+  #   ss.dependency             "JBReact/Core"
   #   ss.source_files         = "rn-source/React/**/RCTTV*.{h, m}"
   # end
 
   s.subspec "jschelpers" do |ss|
     ss.dependency             "Folly", "2016.09.26.00"
-    ss.dependency             "YRDReact/PrivateDatabase"
+    ss.dependency             "JBReact/PrivateDatabase"
     ss.compiler_flags       = folly_compiler_flags
     ss.source_files         = "rn-source/ReactCommon/jschelpers/*.{cpp,h}"
     ss.private_header_files = "rn-source/ReactCommon/jschelpers/*.h"
@@ -91,8 +91,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "cxxreact" do |ss|
-    ss.dependency             "YRDReact/jschelpers"
-    ss.dependency             "YRDReact/jsinspector"
+    ss.dependency             "JBReact/jschelpers"
+    ss.dependency             "JBReact/jsinspector"
     ss.dependency             "boost-for-react-native", "1.63.0"
     ss.dependency             "Folly", "2016.09.26.00"
     ss.compiler_flags       = folly_compiler_flags
@@ -102,73 +102,73 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "ART" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/ART/**/*.{h,m}"
   end
 
   s.subspec "RCTActionSheet" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/ActionSheetIOS/*.{h,m}"
   end
 
   s.subspec "RCTAnimation" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/NativeAnimation/{Drivers/*,Nodes/*,*}.{h,m}"
     ss.header_dir           = "RCTAnimation"
   end
 
   s.subspec "RCTBlob" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/Blob/*.{h,m,mm}"
     ss.preserve_paths       = "rn-source/Libraries/Blob/*.js"
   end
 
   s.subspec "RCTCameraRoll" do |ss|
-    ss.dependency             "YRDReact/Core"
-    ss.dependency             'YRDReact/RCTImage'
+    ss.dependency             "JBReact/Core"
+    ss.dependency             'JBReact/RCTImage'
     ss.source_files         = "rn-source/Libraries/CameraRoll/*.{h,m}"
   end
 
   s.subspec "RCTGeolocation" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/Geolocation/*.{h,m}"
   end
 
   s.subspec "RCTImage" do |ss|
-    ss.dependency             "YRDReact/Core"
-    ss.dependency             "YRDReact/RCTNetwork"
+    ss.dependency             "JBReact/Core"
+    ss.dependency             "JBReact/RCTNetwork"
     ss.source_files         = "rn-source/Libraries/Image/*.{h,m}"
   end
 
   s.subspec "RCTNetwork" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/Network/*.{h,m,mm}"
   end
 
   s.subspec "RCTPushNotification" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/PushNotificationIOS/*.{h,m}"
   end
 
   s.subspec "RCTSettings" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/Settings/*.{h,m}"
   end
 
   s.subspec "RCTText" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/Text/**/*.{h,m}"
   end
 
   s.subspec "RCTVibration" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/Vibration/*.{h,m}"
   end
 
   s.subspec "RCTWebSocket" do |ss|
-    ss.dependency             "YRDReact/Core"
-    ss.dependency             "YRDReact/RCTBlob"
-    ss.dependency             "YRDReact/fishhook"
+    ss.dependency             "JBReact/Core"
+    ss.dependency             "JBReact/RCTBlob"
+    ss.dependency             "JBReact/fishhook"
     ss.source_files         = "rn-source/Libraries/WebSocket/*.{h,m}"
   end
 
@@ -178,19 +178,19 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "RCTLinkingIOS" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/LinkingIOS/*.{h,m}"
   end
 
   s.subspec "RCTTest" do |ss|
-    ss.dependency             "YRDReact/Core"
+    ss.dependency             "JBReact/Core"
     ss.source_files         = "rn-source/Libraries/RCTTest/**/*.{h,m}"
     ss.frameworks           = "XCTest"
   end
 
   s.subspec "_ignore_me_subspec_for_linting_" do |ss|
-    ss.dependency             "YRDReact/Core"
-    ss.dependency             "YRDReact/CxxBridge"
+    ss.dependency             "JBReact/Core"
+    ss.dependency             "JBReact/CxxBridge"
   end
   
   s.subspec "yoga" do |spec|
