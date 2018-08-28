@@ -1,0 +1,3 @@
+# pod4ReactNative
+pod4ReactNative将React Native封装到了一个Pod库中,便于项目以模块化方式引入React Native。
+pod4ReactNative版本对应RN版本
