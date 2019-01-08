@@ -6,7 +6,7 @@ folly_version = '2016.09.26.00'
 
 Pod::Spec.new do |s|
   s.name         = "pod4ReactNative"
-  s.version      = "0.55.4"
+  s.version      = "0.55.4.1"
   s.summary      = "pod for ReactNative"
   s.description  = <<-DESC
                     pod for ReactNative with RN v0.55.4.
