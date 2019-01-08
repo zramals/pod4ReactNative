@@ -120,7 +120,7 @@ Pod::Spec.new do |s|
   s.subspec "RCTBlob" do |ss|
     ss.dependency             "pod4ReactNative/Core"
     ss.source_files         = "rn-source/Libraries/Blob/*.{h,m,mm}"
-    ss.preserve_paths       = "rn-source/Libraries/Blob/*.js"
+    #ss.preserve_paths       = "rn-source/Libraries/Blob/*.js"
   end
 
   s.subspec "RCTCameraRoll" do |ss|
